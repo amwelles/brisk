@@ -1,0 +1,11 @@
+{
+	"name": "brisk",
+	"version": "1.0.0",
+	"description": "Package file for Brisk WordPress theme.",
+	"devDependencies": {
+		"gulp": "^3.9.1",
+		"gulp-postcss": "^7.0.1",
+		"postcss-cssnext": "^3.1.0"
+	},
+	"postcss": {}
+}
