@@ -5,6 +5,7 @@
 	"devDependencies": {
 		"gulp": "github:gulpjs/gulp#4.0",
 		"gulp-babel-minify": "^0.4.1",
+		"gulp-livereload": "^3.8.1",
 		"gulp-minify-css": "^1.2.4",
 		"gulp-postcss": "^7.0.1",
 		"gulp-rename": "^1.2.2",
