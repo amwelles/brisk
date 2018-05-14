@@ -21,10 +21,10 @@
 
 function brisk_styles() {
 	// Load main stylesheet
-	wp_enqueue_style('brisk-style', get_template_directory_uri() . '/min/style.css');
+	wp_enqueue_style('brisk-style', get_template_directory_uri() . '/style.min.css');
 
 	// Load main javascript
-	wp_enqueue_script('brisk-script', get_template_directory_uri() . '/js/functions.js', array('jquery'), '1.0', true);
+	wp_enqueue_script('brisk-script', get_template_directory_uri() . '/functions.min.js', array('jquery'), '1.0', true);
 }
 
 add_action('wp_enqueue_scripts', 'brisk_styles');
