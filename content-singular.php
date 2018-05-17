@@ -20,5 +20,6 @@
 	</header>
 	<section>
 		<?php the_content(); ?>
+		<?php get_template_part('flexible', 'sections'); ?>
 	</section>
 </article>
