@@ -43,6 +43,25 @@ function brisk_jquery_footer() {
 add_action('wp_enqueue_scripts', 'brisk_jquery_footer');
 
 /**
+ * Register Menus
+ *
+ * The code below registers custom WordPress menus using register_my_menus()
+ * function.
+ *
+ * @since Brisk 1.0
+ */
+
+function brisk_register_menus() {
+	register_nav_menus(
+		array(
+			'main-menu' => __('Main Menu')
+		)
+	);
+}
+
+add_action('init', 'brisk_register_menus');
+
+/**
  * Advanced Custom Fields Settings
  *
  * The code below adds and adjusts various functionality for the Advanced Custom
@@ -53,10 +72,10 @@ add_action('wp_enqueue_scripts', 'brisk_jquery_footer');
 
 if( function_exists('acf_add_options_page') ) {
 
-	// Example settings page
+	// Theme settings
 	acf_add_options_page( array(
-		'page_title' => 'Example Settings',
-		'menu_title' => 'Example',
+		'page_title' => 'Theme Settings',
+		'menu_title' => 'Theme Settings',
 		'parent_slug' => 'themes.php'
 	));
 
