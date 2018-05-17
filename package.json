@@ -1,7 +1,7 @@
 {
-	"name": "Chomp",
+	"name": "Brisk",
 	"version": "1.0.0",
-	"description": "Package file for Chomp WordPress theme.",
+	"description": "Package file for Brisk WordPress theme.",
 	"devDependencies": {
 		"gulp": "github:gulpjs/gulp#4.0",
 		"gulp-babel-minify": "^0.4.1",
