@@ -43,6 +43,25 @@ function brisk_jquery_footer() {
 add_action('wp_enqueue_scripts', 'brisk_jquery_footer');
 
 /**
+ * Register Features
+ *
+ * The code below registers custom WordPress theme features using
+ * add_theme_support() function.
+ *
+ * @since Brisk 1.0
+ */
+
+function brisk_features() {
+	// Support title tag
+	add_theme_support('title-tag');
+
+	// Support featured images
+	add_theme_support('post-thumbnails');
+}
+
+add_action('after_setup_theme', 'brisk_features');
+
+/**
  * Register Menus
  *
  * The code below registers custom WordPress menus using register_my_menus()
