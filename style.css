@@ -7,7 +7,18 @@ Version: 1.0.0
 GitHub Theme URI: crisp-agency/brisk
 */
 
-body {
-	background: white;
-	color: black;
+.container {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+	.menu-main-menu-container {
+		& .main-menu-toggle {
+			display: none;
+		}
+		& .menu {
+			display: block !important; /* override menu toggle */
+		}
+	}
 }
