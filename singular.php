@@ -16,9 +16,6 @@ get_header(); ?>
 	<main class="content">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'content', 'singular' ); ?>
-			<?php if ( comments_open() || get_comments_number() ) : ?>
-				<?php comments_template(); ?>
-			<?php endif; ?>
 		<?php endwhile; ?>
 	</main>
 <?php endif; ?>
