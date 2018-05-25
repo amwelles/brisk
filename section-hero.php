@@ -9,10 +9,12 @@
 	}
 
 	?>>
-	<?php if( get_sub_field('title') ): ?>
-		<h1><?php the_sub_field('title'); ?></h1>
-	<?php endif; ?>
-	<?php if( get_sub_field('content') ): ?>
-		<?php the_sub_field('content'); ?>
-	<?php endif; ?>
+	<div class="container">
+		<?php if( get_sub_field('title') ): ?>
+			<h1><?php the_sub_field('title'); ?></h1>
+		<?php endif; ?>
+		<?php if( get_sub_field('content') ): ?>
+			<?php the_sub_field('content'); ?>
+		<?php endif; ?>
+	</div>
 </section>
