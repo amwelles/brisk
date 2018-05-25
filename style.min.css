@@ -1,1 +1,4 @@
-body{background:#fff;color:#000}
+.container{max-width:1024px;margin:0 auto}
+@media (min-width:768px){.menu-main-menu-container .main-menu-toggle{display:none}
+.menu-main-menu-container .menu{display:block!important}
+}
