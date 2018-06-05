@@ -18,6 +18,7 @@
 		$('#menu-main-menu').hide();
 		$('.main-menu-toggle').click(function(e) {
 			e.preventDefault();
+			$(this).toggleClass('expanded');
 			$('#menu-main-menu').slideToggle().toggleClass('expanded');
 		});
 	});

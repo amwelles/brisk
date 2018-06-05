@@ -13,15 +13,13 @@
 ?>
 
 <article>
-	<div class="container">
-		<header>
-			<h1>
-				<?php the_title(); ?>
-			</h1>
-		</header>
-		<section>
-			<?php the_content(); ?>
-		</section>
-	</div>
+	<header>
+		<h1>
+			<?php the_title(); ?>
+		</h1>
+	</header>
+	<section>
+		<?php the_content(); ?>
+	</section>
 	<?php get_template_part('flexible', 'sections'); ?>
 </article>
