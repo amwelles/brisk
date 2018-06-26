@@ -9,12 +9,18 @@ $section_options
 	->addRadio('layout',
 		['instructions' => 'Determines the width of the content.'])
 		->addChoice('','Default')
-		->addChoice('layout','Normal')
+		->addChoice('normal','Normal')
 		->addChoice('wide','Wide')
-		->addChoice('none','Full')
+		->addChoice('full','Full')
 		->addChoice('narrow','Narrow')
 	->addText('classes',
 		['placeholder' => 'hero hero--featured']);
+
+// Title
+$title = new FieldsBuilder('title');
+$title
+	->addText('page_title')
+	->addText('subtitle');
 
 // WYSIWYG
 $wysiwyg = new FieldsBuilder('wysiwyg');
@@ -33,6 +39,10 @@ $hero
 $sections = new FieldsBuilder('sections');
 $sections
 	->addFlexibleContent('sections')
+		->addLayout('title', ['min' => 1])
+			->addTab('Content')
+			->addFields($title)
+			->addFields($section_options)
 		->addLayout('wysiwyg', ['label'=>'WYSIWYG'])
 			->addTab('Content')
 			->addFields($wysiwyg)
