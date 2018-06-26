@@ -80,6 +80,15 @@ function brisk_register_menus() {
 
 add_action('init', 'brisk_register_menus');
 
+// Remove editor (using flexible content instead)
+
+function remove_editor() {
+	remove_post_type_support('page', 'editor');
+	remove_post_type_support('post', 'editor');
+}
+
+add_action('init', 'remove_editor');
+
 /**
  * Advanced Custom Fields Settings
  *
@@ -101,4 +110,5 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 // Include fields
-require_once('acf-fields.php');
+require_once('vendor/autoload.php');
+require_once('fields.php');
