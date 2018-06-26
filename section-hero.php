@@ -7,7 +7,7 @@ if ( get_sub_field('background_image') ) {
 }
 ?>
 
-<section class="section<?php echo isset($classes) ? $classes : ''; ?>"<?php echo isset($style) ? 'style="'. $style .'"' : ''; ?>>
+<section class="section section--hero<?php echo isset($classes) ? $classes : ''; ?>"<?php echo isset($style) ? 'style="'. $style .'"' : ''; ?>>
 	<div class="layout layout--<?php echo $layout; ?>">
 		<?php if ( get_sub_field('title') ): ?>
 			<h2><?php the_sub_field('title'); ?></h2>
