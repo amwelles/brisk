@@ -21,6 +21,6 @@
 		</h2>
 	</header>
 	<section>
-		<?php the_content(); ?>
+		<?php the_field('teaser'); ?>
 	</section>
 </article>
