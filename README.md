@@ -9,5 +9,5 @@ This theme uses [PostCSS](https://github.com/postcss/postcss) and [PostCSS-cssne
 3. While in the repo root directory, run `npm install` from your terminal.
 4. In that same directory, run `gulp` from your terminal.
 5. Make sure you have the [LiveReload Chrome plugin installed](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en) and enabled with the site pulled up.
-6. Make changes in `/style.css` and `/functions.js`.
+6. Make changes in `/imports/*/*.css` and `/functions.js`.
 7. See changes reflected in `/style.min.css` and `/functions.min.js`.
