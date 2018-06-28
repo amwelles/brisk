@@ -52,13 +52,23 @@ $sections
 			->addFields($hero)
 			->addFields($section_options);
 
+$page_options = new FieldsBuilder('page_options');
+$page_options
+	->addWysiwyg('teaser',[
+		'instructions' => 'Appears in lists.',
+		'media_upload' => 0
+	]);
+
 // Page content
-$page_content = new FieldsBuilder('page_content');
-$page_content
+$page = new FieldsBuilder('page');
+$page
+	->addTab('Page Content')
 	->addFields($sections)
+	->addTab('Page Options')
+	->addFields($page_options)
 	->setLocation('post_type', '==', 'page')
 		->or('post_type', '==', 'post');
 
-add_action('acf/init', function() use ($page_content) {
-	acf_add_local_field_group($page_content->build());
+add_action('acf/init', function() use ($page) {
+	acf_add_local_field_group($page->build());
 });

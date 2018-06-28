@@ -5,13 +5,13 @@ if( have_rows('sections') ):
 
 		switch( get_row_layout() ) {
 			case 'title':
-				get_template_part('section', 'title');
+				get_template_part('sections/section', 'title');
 				break;
 			case 'wysiwyg':
-				get_template_part('section', 'wysiwyg');
+				get_template_part('sections/section', 'wysiwyg');
 				break;
 			case 'hero':
-				get_template_part('section', 'hero');
+				get_template_part('sections/section', 'hero');
 				break;
 		}
 
