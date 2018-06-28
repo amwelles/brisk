@@ -12,6 +12,15 @@
 // jQuery
 (function($) {
 
-	// write your jQuery here, yo
+	$(document).ready(function() {
+		// Menu toggle
+		$('.menu-main-menu-container').prepend('<a href="#" class="main-menu-toggle">Menu</a>');
+		$('#menu-main-menu').hide();
+		$('.main-menu-toggle').click(function(e) {
+			e.preventDefault();
+			$(this).toggleClass('expanded');
+			$('#menu-main-menu').slideToggle().toggleClass('expanded');
+		});
+	});
 
 })(jQuery);
