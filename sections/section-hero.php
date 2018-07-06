@@ -1,5 +1,5 @@
 <?php
-include('section-variables.php');
+include('variables.php');
 
 if ( get_sub_field('background_image') ) {
 	$image = get_sub_field('background_image');

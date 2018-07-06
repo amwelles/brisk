@@ -1,5 +1,5 @@
 <?php
-include('section-variables.php');
+include('variables.php');
 ?>
 
 <section class="section section--title<?php echo isset($classes) ? $classes : ''; ?>">

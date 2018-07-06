@@ -2,7 +2,10 @@
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
+//
 // Section options
+//
+
 $section_options = new FieldsBuilder('options');
 $section_options
 	->addTab('Options')
@@ -14,7 +17,23 @@ $section_options
 		->addChoice('full','Full')
 		->addChoice('narrow','Narrow')
 	->addText('classes',
-		['placeholder' => 'hero hero--featured']);
+		['placeholder' => 'section--featured']);
+
+//
+// Sections, ordered alphabetically
+//
+
+// Hero
+$hero = new FieldsBuilder('hero');
+$hero
+	->addText('title')
+	->addImage('background_image')
+	->addFields($wysiwyg)
+	->addLink('cta', ['label'=>'Call to Action']);
+
+$image = new FieldsBuilder('image');
+$image
+	->addImage('image');
 
 // Title
 $title = new FieldsBuilder('title');
@@ -27,18 +46,21 @@ $wysiwyg = new FieldsBuilder('wysiwyg');
 $wysiwyg
 	->addWysiwyg('content');
 
-// Hero
-$hero = new FieldsBuilder('hero');
-$hero
-	->addText('title')
-	->addImage('background_image')
-	->addFields($wysiwyg)
-	->addLink('cta', ['label'=>'Call to Action']);
+//
+// Build out sections
+//
 
-// Sections
 $sections = new FieldsBuilder('sections');
 $sections
 	->addFlexibleContent('sections')
+		->addLayout('hero')
+			->addTab('Content')
+			->addFields($hero)
+			->addFields($section_options)
+		->addLayout('image')
+			->addTab('Content')
+			->addFields($image)
+			->addFields($section_options)
 		->addLayout('title', ['min' => 1])
 			->addTab('Content')
 			->addFields($title)
@@ -46,10 +68,6 @@ $sections
 		->addLayout('wysiwyg', ['label'=>'WYSIWYG'])
 			->addTab('Content')
 			->addFields($wysiwyg)
-			->addFields($section_options)
-		->addLayout('hero')
-			->addTab('Content')
-			->addFields($hero)
 			->addFields($section_options);
 
 $page_options = new FieldsBuilder('page_options');
@@ -59,7 +77,10 @@ $page_options
 		'media_upload' => 0
 	]);
 
+//
 // Page content
+//
+
 $page = new FieldsBuilder('page');
 $page
 	->addTab('Page Content')
